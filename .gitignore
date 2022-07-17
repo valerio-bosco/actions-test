@@ -1,5 +1,2 @@
-api_keys.env
-credentials.json
-token.json
 app/node_modules/*
 kubernetes/underdefresco_key.yaml
