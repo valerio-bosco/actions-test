@@ -37,3 +37,13 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  pull_from_repo:
+    name: Pull repo from GitHub
+    runs-on: self-hosted
+    needs: push_to_registry
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      - name: List files in the repository
+        run: ls
+
